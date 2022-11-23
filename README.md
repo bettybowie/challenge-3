@@ -10,7 +10,7 @@ When the red "Generate Password" is clicked, the user is prompted to choose pass
 
 ## Visual
 
-![Demo](generator_demo.gif)
+![Demo](password_demo.gif)
 
 ## Links
 

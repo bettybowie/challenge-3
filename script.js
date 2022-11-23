@@ -106,6 +106,3 @@ for (var i=0; i<confirmLength; i++) {
 }
 return randomCombo;
 }
-
-
-// randomCombo += passwordParameter.charAt(Math.floor(Math.random() * passwordParameter.length));
