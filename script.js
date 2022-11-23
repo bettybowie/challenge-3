@@ -46,8 +46,8 @@ function generatePassword() {
   var confirmSpecialChar = confirm("Would you like to include special characters?");
 
   // If none of the criteria was picked
-  while(confirmUpper===false && confirmLower===false && confirmNumber===false && confirmSpecialLetters===false) {
-    alert("Please make sure to select OK to at least one of the criteria.")
+  while(confirmUpper === false && confirmLower === false && confirmNumber === false && confirmSpecialChar === false) {
+    alert("Please make sure to select OK to at least one of the criteria.");
     var confirmUpper = confirm("Would you like to include uppercase letters?");
     var confirmLower = confirm("Would you like to include lowercase letters?");
     var confirmNumber = confirm("Would you like to include numbers?");
@@ -98,11 +98,14 @@ if (confirmSpecialChar) {
 };
 
 // to generate random string
-var randomPassword = [];
+var randomCombo = [];
 
+// The loop will run confirmLength times 
 for (var i=0; i<confirmLength; i++) {
-  randomPassword = randomPassword + passwordParameter[Math.floor(Math.random() * passwordParameter.length)];
+  randomCombo = randomCombo + passwordParameter[Math.floor(Math.random() * passwordParameter.length)]
 }
-return randomPassword;
+return randomCombo;
 }
 
+
+// randomCombo += passwordParameter.charAt(Math.floor(Math.random() * passwordParameter.length));
