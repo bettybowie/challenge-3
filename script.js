@@ -37,7 +37,7 @@ function generatePassword() {
   // Allow user to exit
   if (confirmLength === null) {
     return;
-  }
+  };
 
   // If a number outside the parameter is entered
   while(confirmLength>128 || confirmLength<8){
@@ -45,7 +45,7 @@ function generatePassword() {
     var confirmLength = prompt("Enter desired password length (between 8-128 characters");
     if (confirmLength === null){
       return;
-    }
+    };
   };
 
   var confirmUpper = confirm("Would you like to include uppercase letters?");
@@ -67,87 +67,51 @@ function generatePassword() {
  var confirmMessage = "You wanted a " + confirmLength + "-digit password, containing";
  
  if (confirmUpper){
-  confirmMessage += " uppercase letters,"
+  confirmMessage += " uppercase letters,";
  };
 
  if (confirmLower){
-  confirmMessage += " lowercase letters,"
+  confirmMessage += " lowercase letters,";
  };
 
  if (confirmNumber){
-  confirmMessage += " numbers,"
+  confirmMessage += " numbers,";
  };
 
  if (confirmSpecialChar){
-  confirmMessage += " special characters,"
+  confirmMessage += " special characters,";
  };
 
 confirmMessage = confirmMessage.slice(0, -1) + '.';
- 
-//  alert(confirmMessage);
 
-confirm(confirmMessage);
+// Allow the user to review the selected criteria
+alert(confirmMessage);
 
-if (confirm(confirmMessage)){
-  //  Combining selected criteria
-  var  passwordParameter = [];
+//  Combining selected criteria
+var  passwordParameter = [];
 
-  if (confirmUpper) {
-    passwordParameter += uppercase
-  };
+if (confirmUpper) {
+  passwordParameter += uppercase;
+};
 
-  if (confirmLower) {
-  passwordParameter += lowercase
-  };
+if (confirmLower) {
+  passwordParameter += lowercase;
+};
 
-  if (confirmNumber) {
-    passwordParameter += numbers
-  };
+if (confirmNumber) {
+  passwordParameter += numbers;
+};
 
-  if (confirmSpecialChar) {
-    passwordParameter += specialChar
-  };
+if (confirmSpecialChar) {
+  passwordParameter += specialChar;
+};
 
-  // to generate random string
-  var randomCombo = [];
+// to generate random string
+var randomCombo = [];
 
-  // The loop will run confirmLength times 
-  for (var i=0; i<confirmLength; i++) {
-    randomCombo = randomCombo + passwordParameter[Math.floor(Math.random() * passwordParameter.length)]
-  }
-  return randomCombo;
+// The loop will run confirmLength times 
+for (var i=0; i<confirmLength; i++) {
+  randomCombo = randomCombo + passwordParameter[Math.floor(Math.random() * passwordParameter.length)];
 }
-
-while(confirm(confirmMessage)===false) {
-  
-}
-
-
-// //  Combining selected criteria
-// var  passwordParameter = [];
-
-// if (confirmUpper) {
-//   passwordParameter += uppercase
-// };
-
-// if (confirmLower) {
-//   passwordParameter += lowercase
-// };
-
-// if (confirmNumber) {
-//   passwordParameter += numbers
-// };
-
-// if (confirmSpecialChar) {
-//   passwordParameter += specialChar
-// };
-
-// // to generate random string
-// var randomCombo = [];
-
-// // The loop will run confirmLength times 
-// for (var i=0; i<confirmLength; i++) {
-//   randomCombo = randomCombo + passwordParameter[Math.floor(Math.random() * passwordParameter.length)]
-// }
-// return randomCombo;
-}
+return randomCombo;
+};
