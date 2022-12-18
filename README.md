@@ -14,9 +14,9 @@ When the red "Generate Password" is clicked, the user is prompted to choose pass
 
 ## Links
 
-Solution URL: [https://github.com/bettybowie/challenge-3]
+Solution URL: [https://github.com/bettybowie/passwordGenerator]
 
-Live URL: [https://bettybowie.github.io/challenge-3/]
+Live URL: [https://bettybowie.github.io/passwordGenerator/]
 
 ## License
 
